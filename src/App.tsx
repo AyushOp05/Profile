@@ -6,6 +6,7 @@
 import { motion, useScroll, useSpring } from 'motion/react';
 import { Github, Linkedin, Twitter, ExternalLink, Mail, ArrowUpRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import ayushPhoto from './assets/ayush.jpg';
 
 const projects = [
   {
@@ -78,7 +79,7 @@ export default function App() {
         <div className="flex flex-col items-start gap-1">
           <div className="w-10 h-10 rounded-full overflow-hidden border border-accent/30 p-0.5">
             <img 
-              src="/ayush.jpg" 
+              src={ayushPhoto} 
               alt="Ayush" 
               className="w-full h-full rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
             />
@@ -132,7 +133,7 @@ export default function App() {
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-accent/20 p-2">
                   <div className="w-full h-full rounded-full overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
                     <img
-                      src="/ayush.jpg"
+                      src={ayushPhoto}
                       alt="Ayush Gupta"
                       className="w-full h-full object-cover object-center"
                     />
