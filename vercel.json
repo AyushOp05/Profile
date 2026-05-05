@@ -3,6 +3,6 @@
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
   "env": {
-    "VITE_GEMINI_API_KEY": "@GEMINI_API_KEY"
+    "VITE_GEMINI_API_KEY": "@VITE_GEMINI_API_KEY"
   }
 }
