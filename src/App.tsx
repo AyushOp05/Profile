@@ -4,7 +4,7 @@
  */
 
 import { motion, useScroll, useSpring } from 'motion/react';
-import { Github, Linkedin, Twitter, ExternalLink, Mail, ArrowUpRight } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, ArrowUpRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const projects = [
@@ -166,10 +166,10 @@ export default function App() {
                 </p>
                 <div className="text-paper/60 font-mono space-y-6 text-lg max-w-2xl">
                   <p>
-                    Currently pursuing Bachelor of Engineering in AI & ML at BMS Institute of Technology & Management. I specialize in building full-stack applications with an emphasis on data-driven intelligence.
+                    Currently pursuing Bachelor of Engineering in AI & ML at BMS Institute of Technology & Management. I specialize in building full-stack applications with an emphasis on data-driven solutions and intelligent systems.
                   </p>
                   <p>
-                    My philosophy is centered on architectural honesty and refined aesthetics. Whether it's optimizing a neural network or crafting a high-performance interface, I strive for precision and excellence in every line of code.
+                    My philosophy is centered on architectural honesty and refined aesthetics. Whether it's optimizing a neural network or crafting a high-performance interface, I strive for precision and elegance in every project.
                   </p>
                 </div>
               </motion.div>
@@ -231,7 +231,7 @@ export default function App() {
                     <span className="font-mono text-[10px] text-accent tracking-[0.3em]">0{idx + 1}</span>
                     <a 
                       href={project.link} 
-                      className="flex items-center gap-2 px-4 py-2 bg-paper/5 rounded-full border border-paper/10 group-hover:bg-accent group-hover:text-dark group-hover:border-accent transition-all duration-500 font-mono text-[10px] tracking-widest scale-90 group-hover:scale-100"
+                      className="flex items-center gap-2 px-4 py-2 bg-paper/5 rounded-full border border-paper/10 group-hover:bg-accent group-hover:text-dark group-hover:border-accent transition-all duration-500"
                     >
                       VIEW <ArrowUpRight className="w-3 h-3 group-hover:rotate-45 transition-transform duration-500" />
                     </a>
