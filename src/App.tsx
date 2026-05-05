@@ -107,14 +107,14 @@ export default function App() {
       <main>
         {/* Hero Section */}
         <section id="home" className="min-h-screen flex items-center px-6 md:px-24 py-32 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
             <div className="md:col-span-8">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
-                <h1 className="text-7xl md:text-[10vw] font-extrabold leading-[0.85] tracking-tighter mb-8 italic">
+                <h1 className="text-6xl md:text-[8.5vw] font-extrabold leading-[0.8] tracking-tighter mb-8 italic">
                   AYUSH<br />GUPTA
                 </h1>
                 <p className="text-xl md:text-2xl text-paper/70 font-mono max-w-xl leading-relaxed">
@@ -216,15 +216,24 @@ export default function App() {
               {projects.map((project, idx) => (
                 <motion.div
                   key={project.title}
-                  initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, scale: 0.9, x: idx % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                  whileHover={{ 
+                    scale: 1.02,
+                    rotate: idx % 2 === 0 ? 1 : -1,
+                    backgroundColor: "rgba(255, 255, 255, 0.06)"
+                  }}
                   viewport={{ once: true }}
-                  className="glass-card p-12 group hover:ring-1 hover:ring-accent/30 transition-all duration-500"
+                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                  className="glass-card p-12 group hover:ring-1 hover:ring-accent/30 transition-all duration-500 shadow-xl hover:shadow-2xl hover:shadow-accent/5 backdrop-blur-xl"
                 >
                   <div className="flex justify-between items-start mb-8">
                     <span className="font-mono text-[10px] text-accent tracking-[0.3em]">0{idx + 1}</span>
-                    <a href={project.link} className="p-2 bg-paper/5 rounded-full hover:bg-accent hover:text-dark transition-all">
-                      <ExternalLink className="w-4 h-4" />
+                    <a 
+                      href={project.link} 
+                      className="flex items-center gap-2 px-4 py-2 bg-paper/5 rounded-full border border-paper/10 group-hover:bg-accent group-hover:text-dark group-hover:border-accent transition-all duration-500 font-mono text-[10px] tracking-widest scale-90 group-hover:scale-100"
+                    >
+                      VIEW <ArrowUpRight className="w-3 h-3 group-hover:rotate-45 transition-transform duration-500" />
                     </a>
                   </div>
                   <h3 className="text-3xl font-bold mb-4 group-hover:text-accent transition-colors italic">{project.title}</h3>
