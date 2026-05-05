@@ -6,7 +6,7 @@
 import { motion, useScroll, useSpring } from 'motion/react';
 import { Github, Linkedin, Twitter, ExternalLink, Mail, ArrowUpRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import ayushPhoto from './assets/ayush.jpg';
+import ayushPhoto from './assets/ayush.jpeg';
 
 const projects = [
   {
